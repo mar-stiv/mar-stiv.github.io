@@ -1,0 +1,105 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* iPhone styles */
+.iphone {
+  background-color: #eee;
+  border-radius: 40px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  height: 600px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 320px;
+}
+
+/* Screen styles */
+.screen {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  height: 520px;
+  left: 16px;
+  overflow: hidden;
+  position: absolute;
+  top: 60px;
+  width: 288px;
+}
+
+/* Login form styles */
+h1 {
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+}
+
+input {
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+button {
+  background-color: #333;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+button:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+img {
+  margin-bottom: 80px;
+  padding: 10px;
+  height: 20%;
+}
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+  .iphone {
+    height: 800px;
+    width: 420px;
+  }
+
+  .screen {
+    height: 660px;
+    left: 32px;
+    top: 70px;
+    width: 356px;
+  }
+}
