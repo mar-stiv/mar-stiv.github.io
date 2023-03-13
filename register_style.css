@@ -72,7 +72,7 @@ input {
 button {
   background-color: #8876F6;
   margin-top: 2%;
-  border: solid 3px #8876F6;
+  border: solid 3px #553aff;
   border-radius: 20px;
   color: white;
   font-size: 16px;
@@ -82,19 +82,20 @@ button {
 }
 
 button:hover {
-  background-color: #8876F6;
+  background-color: #553aff;
   cursor: pointer;
 }
 
 .alt_button {
   background-color: #fff;
-  border: solid 3px #8876F6;
+  border: solid 3px #553aff;
   border-radius: 20px;
   color: #555;
 }
 
 .alt_button:hover {
   color: #fff;
+  background-color: #8876F6;
 }
 
 img {
@@ -114,6 +115,7 @@ p {
   height: 30%;
   margin-bottom: 20%;
 }
+
 
 
 /*selction tabel style*/
@@ -151,6 +153,37 @@ td {
   width: 90px;
   height: auto;
 }
+
+/*alt selector style*/
+/*selction style*/
+#selection_container {
+  border: solid #8876F6 3px;
+  border-radius: 10px;
+  width: 96%;
+  height: 50%;
+  margin: 2% 2% 2% 2%;
+}
+
+#back_button {
+  float: left;
+  width: 40%;
+  margin-left: 5%;
+}
+
+#next_button {
+  float: right;
+  width: 40%;
+  margin-right: 5%;
+}
+
+#selector_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: auto;
+}
+
 
 /*Pet Naming Style*/
 .naming_img {

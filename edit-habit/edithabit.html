@@ -2,7 +2,7 @@
 <html lang="english">
 
 <head>
-    <title>exported project</title>
+    <title>HabitRabbit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -129,40 +129,32 @@
             <div class="habit-habit">
                 <div class="form-box">
                     <header>
-                        <a href="../home/home.html" class="back"> <img src="public/playground_assets/back.png" id="back-img"> </a>
+                        <a href="../habit_stat/checkhabitstat.html" class="back"> <img src="public/playground_assets/back.png" id="back-img"> </a>
                         <h1>Edit Habit</h1>
                     </header>
 
                     <div class="form-group">
 
                         <label for="name" class="form-label">Name*</label>
-                        <input type="text" class="form-input" id="name" name="name" required><br>
+                        <input type="text" class="form-input" id="name" name="name" required value="current habit name"><br>
 
                         <label for="frequency" class="form-label">Frequency*</label>
-                        <input type="text" class="form-input" id="frequency" name="frequency" required><br>
+                        <input type="text" class="form-input" id="frequency" name="frequency" required value="current frequency"><br>
 
                         <label for="reminder" class="form-label">Reminder</label>
-                        <input type="text" class="form-input" id="reminder" name="reminder"><br>
+                        <input type="text" class="form-input" id="reminder" name="reminder" value="current reminder"><br>
 
                         <label for="note" class="form-label">Note</label>
-                        <input type="text" class="form-input" id="note" name="note"><br>
-
-                        <label for="target-habit" class="form-label">Target Habit</label>
-                        <input type="text" class="form-input" id="target-habit" name="target-habit"><br>
-
-                        <label for="unit" class="form-label">Unit</label>
-                        <input type="text" class="form-input" id="unit" name="unit"><br>
+                        <input type="text" class="form-input" id="note" name="note" value="current note"><br>
 
                         <a href="../home/home.html">
-              <button type="button" id="end-button" class="button">Save</button>
-          </a>
+                            <button type="button" id="end-button" class="button">Save</button>
+                        </a>
                     </div>
 
                 </div>
             </div>
-
         </div>
-        <script src="../home/script.js"></script>
 </body>
 
 </html>

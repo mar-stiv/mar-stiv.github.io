@@ -1,26 +1,63 @@
 var my_screen = document.getElementById("iphone_screen");
 
+var curr_design_num;
+
+function random_design_num() {
+    Math.random() >= 0.5 ? curr_design_num = 1 : curr_design_num = 0;
+}
+random_design_num()
+console.log(curr_design_num)
+
+
 /*
 *Timer
 */
-var start_time;
-var end_time;
+var start_time_design0;
+var end_time_design0;
+var total_time_design0;
+var test0_done = false;
+
+var start_time_design1;
+var end_time_design1;
+var total_time_design1;
+var test1_done = false;
+
 
 function end_timer() {
-    end_time = Date.now();
-    var total_time = (end_time - start_time) / 1000;
+    if (curr_design_num == 0) {
+        end_time_design0 = Date.now();
+        total_time_design0 = (end_time_design0 - start_time_design0) / 1000;
+        test0_done = true;
+    } else {
+        end_time_design1 = Date.now();
+        total_time_design1 = (end_time_design1 - start_time_design1) / 1000;
+        test1_done = true;
+    }
 
-    alert(`It took you ${total_time} second to complete registration`)
+    /*IF BOTH TEST DONE SUMMARY & SEND TO HOME 
+    ELSE CHANGE CURR_TEST_NUM AND RESTART TES*/
+    if (test0_done && test1_done) {
+        my_screen.innerHTML = `
+        <p>Design0 took you ${total_time_design0} second to complete</p>
+        <p>Design1 took you ${total_time_design1} second to complete</p>
+        <a href="home/home.html">Continue</a>`
+            ;
+    } else {
+        alert("You will now do the same for the second design")
+        curr_design_num == 0 ? curr_design_num = 1 : curr_design_num = 0;
+        get_login_register_screen()
+    }
 }
 
 /*
 *Start screeen --> login_register screen
 */
 function get_login_register_screen() {
-    start_time = Date.now();
+    if (curr_design_num == 0) { start_time_design0 = Date.now() }
+    else { start_time_design1 = Date.now() }
 
     // Change the HTML content of the div
-    my_screen.innerHTML = "<h1>Welcome</h1>" +
+    my_screen.innerHTML = `<h1>Welcome</h1>` +
         "<form>" +
         `<img src="logo.png" id="company_logo" alt="Company Logo">` +
         "<input type=\"text\" placeholder=\"Username\">" +
@@ -57,10 +94,16 @@ function get_registration_form() {
     "</form>";
 }
 
+
+/*
+* find correct pet selector
+*/
+function get_pet_selector() { curr_design_num == 0 ? get_pet_selector0() : get_pet_selector1(1) }
+
 /*
 *registration form --> pet_selector
 */
-function get_pet_selector() {
+function get_pet_selector0() {
 
     my_screen.innerHTML = "<table>" +
         "<tr class=\"row\">" +
@@ -105,4 +148,34 @@ function get_pet_naming_screen(pet_number) {
                 <button id="done_button" onclick="end_timer()">Confirm</button>
                 <button class="alt_button" onclick="get_pet_selector()">Back</button>
                 </form>"`;
+}
+
+/*
+*registration form --> pet_selector
+*/
+function get_pet_selector1(petNum) {
+    console.log(petNum);
+
+    my_screen.innerHTML = `
+    <h1>Select Your Pet & Name Them</h1>
+    <div id="selection_container">
+    <img src="pet${petNum}.gif" alt="Image 1" id="selector_img">
+    <br>
+    <button id="back_button" onclick="prevPet(${petNum})"><-Previous</button>
+    <button id="next_button" onclick="nextPet(${petNum})">Next -></button>
+    </div>
+    <form>
+    <input type="text" placeholder="Enter Pet Name" required>
+    <button onclick="end_timer()">Confirm Registration</button>
+    <button class="alt_button" onclick="get_registration_form()">Back</button>
+    </form>`
+}
+
+function nextPet(currPetNum) {
+    console.log("next")
+    currPetNum >= 8 ? get_pet_selector1(1) : get_pet_selector1(currPetNum + 1);
+}
+
+function prevPet(currPetNum) {
+    currPetNum <= 1 ? get_pet_selector1(8) : get_pet_selector1(currPetNum - 1);
 }

@@ -12,12 +12,13 @@ endbutton.addEventListener("click", end);
 
 function start() {
     starttime = Date.now();
-    alert(`It took you ${starttime} second to add a new habit`);
+    sessionStorage.setItem("start_time_new_habit", starttime);
 }
 
-function end() {
+function end_timer() {
     endtime = Date.now();
-    totaltime = (endtime - starttime) / 1000;
+    starttime = sessionStorage.getItem("start_time_new_habit");
+    total_time = (endtime - starttime) / 1000;
     alert(`It took you ${total_time} second to complete registration`)
     //timeout = setTimeout(alertFunc, 2000);
 }
@@ -25,3 +26,4 @@ function end() {
 function alertFunc() {
     //alert(`It took you ${totaltime} second to add a new habit`);
 }
+
