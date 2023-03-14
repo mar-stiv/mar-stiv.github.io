@@ -1,132 +1,178 @@
 <!DOCTYPE html>
 <html lang="english">
-  <head>
-    <title>exported project</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
+<head>
+  <title>exported project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta property="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image" href="../../logo_icon.png">
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
+  <style data-tag="reset-style-sheet">
+    html {
+      line-height: 1.15;
+    }
 
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
-      data-tag="font"
-    />
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <div>
-      <link href="./checkitem.css" rel="stylesheet" />
+    body {
+      margin: 0;
+    }
 
-      <div class="checkitem-container">
-        <div class="checkitem-checkitem">
-          <img
-            src="public/playground_assets/rectangle69694-zia-200h.png"
-            alt="Rectangle69694"
-            class="checkitem-rectangle6"
-          />
-          <img
-            src="public/playground_assets/vector9610-m8dc.svg"
-            alt="Vector9610"
-            class="checkitem-vector"
-          />
-          <div class="checkitem-group17">
-            <span class="checkitem-text"><span>120</span></span>
-            <img
-              src="public/playground_assets/vector9610-0txe.svg"
-              alt="Vector9610"
-              class="checkitem-vector1"
-            />
-          </div>
-          <img
-            src="public/playground_assets/rectangle89610-tcriq-200h.png"
-            alt="Rectangle89610"
-            class="checkitem-rectangle8"
-          />
-          <img
-            src="public/playground_assets/vector9611-6rv.svg"
-            alt="Vector9611"
-            class="checkitem-vector2"
-          />
-          <img
-            src="public/playground_assets/vector9611-6yv9.svg"
-            alt="Vector9611"
-            class="checkitem-vector3"
-          />
-          <img
-            src="public/playground_assets/vector9613-hv2q.svg"
-            alt="Vector9613"
-            class="checkitem-vector4"
-          />
-          <img
-            src="public/playground_assets/rectangle279614-mq3g-400w.png"
-            alt="Rectangle279614"
-            class="checkitem-rectangle27"
-          />
-          <img
-            src="public/playground_assets/rectangle249614-rpmp-300w.png"
-            alt="Rectangle249614"
-            class="checkitem-rectangle24"
-          />
-          <div class="checkitem-group18">
-            <img
-              src="public/playground_assets/rectangle29614-7wnb-200h.png"
-              alt="Rectangle29614"
-              class="checkitem-rectangle2"
-            />
-          </div>
-          <span class="checkitem-text2">
-            <span>
-              This is the description for the current item. I should have used
-              lorem instead.
-            </span>
-          </span>
-          <a href="../main_shop.html" onclick="end_timer()">
-            <div class="checkitem-group3">
-              <span class="checkitem-text4">
-                <span>Buy for</span>
-              </span>
-          </div>
-          <img
-            src="public/playground_assets/vector9615-sdtc.svg"
-            alt="Vector9615"
-            class="checkitem-vector5"
-          />
-        </a>
-          <span class="checkitem-text6"><span>20</span></span>
-          <img
-            src="public/playground_assets/vector9623-b9g.svg"
-            alt="Vector9623"
-            class="checkitem-vector6"
-          />
+    * {
+      box-sizing: border-box;
+      border-width: 0;
+      border-style: solid;
+    }
+
+    p,
+    li,
+    ul,
+    pre,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    figure,
+    blockquote,
+    figcaption {
+      margin: 0;
+      padding: 0;
+    }
+
+    button {
+      background-color: transparent;
+    }
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 100%;
+      line-height: 1.15;
+      margin: 0;
+    }
+
+    button,
+    select {
+      text-transform: none;
+    }
+
+    button,
+    [type="button"],
+    [type="reset"],
+    [type="submit"] {
+      -webkit-appearance: button;
+    }
+
+    button::-moz-focus-inner,
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
+      border-style: none;
+      padding: 0;
+    }
+
+    button:-moz-focus,
+    [type="button"]:-moz-focus,
+    [type="reset"]:-moz-focus,
+    [type="submit"]:-moz-focus {
+      outline: 1px dotted ButtonText;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    input {
+      padding: 2px 4px;
+    }
+
+    img {
+      display: block;
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+  </style>
+  <style data-tag="default-style-sheet">
+    html {
+      font-family: Inter;
+      font-size: 16px;
+    }
+
+    body {
+      font-weight: 400;
+      font-style: normal;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 1.15;
+      color: var(--dl-color-gray-black);
+      background-color: var(--dl-color-gray-white);
+
+    }
+  </style>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+    data-tag="font" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div>
+    <link href="./checkitem.css" rel="stylesheet" />
+
+    <div class="checkitem-container">
+      <div class="checkitem-checkitem">
+        <img src="public/playground_assets/rectangle69694-zia-200h.png" alt="Rectangle69694"
+          class="checkitem-rectangle6" />
+        <img src="public/playground_assets/vector9610-m8dc.svg" alt="Vector9610" class="checkitem-vector" />
+        <div class="checkitem-group17">
+          <span class="checkitem-text"><span>120</span></span>
+          <img src="public/playground_assets/vector9610-0txe.svg" alt="Vector9610" class="checkitem-vector1" />
         </div>
+        <img src="public/playground_assets/rectangle89610-tcriq-200h.png" alt="Rectangle89610"
+          class="checkitem-rectangle8" />
+        <img src="public/playground_assets/vector9611-6rv.svg" alt="Vector9611" class="checkitem-vector2" />
+        <img src="public/playground_assets/vector9611-6yv9.svg" alt="Vector9611" class="checkitem-vector3" />
+        <img src="public/playground_assets/vector9613-hv2q.svg" alt="Vector9613" class="checkitem-vector4" />
+        <img src="public/playground_assets/rectangle279614-mq3g-400w.png" alt="Rectangle279614"
+          class="checkitem-rectangle27" />
+        <img src="public/playground_assets/rectangle249614-rpmp-300w.png" alt="Rectangle249614"
+          class="checkitem-rectangle24" />
+        <div class="checkitem-group18">
+          <img src="public/playground_assets/rectangle29614-7wnb-200h.png" alt="Rectangle29614"
+            class="checkitem-rectangle2" />
+        </div>
+        <span class="checkitem-text2">
+          <span>
+            This is the description for the current item. I should have used
+            lorem instead.
+          </span>
+        </span>
+        <a href="../main_shop.html" onclick="end_timer()">
+          <div class="checkitem-group3">
+            <span class="checkitem-text4">
+              <span>Buy for</span>
+            </span>
+          </div>
+          <img src="public/playground_assets/vector9615-sdtc.svg" alt="Vector9615" class="checkitem-vector5" />
+        </a>
+        <span class="checkitem-text6"><span>20</span></span>
+        <img src="public/playground_assets/vector9623-b9g.svg" alt="Vector9623" class="checkitem-vector6" />
       </div>
     </div>
-    <script src="../shop/shop.js"></script>
-  </body>
+  </div>
+  <script src="../shop/shop.js"></script>
+</body>
+
 </html>
