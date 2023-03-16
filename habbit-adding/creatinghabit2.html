@@ -144,42 +144,18 @@
                         <label for="unit" class="form-label">Unit*</label>
                         <input type="text" class="form-input" id="unit" name="unit" placeholder="e.g. kilometers" required><br>
 
-                        <label for="frequency" class="form-label">Frequency*</label>
-                        <div class="checkbox-dropdown">
-                            <p id="freqP">Every day (cannot change option yet)</p>
-                            <ul class="checkbox-dropdown-list">
-                                <li>
-                                    <label>
-                                        <input type="radio" name="city" checked="checked" id="radio1"
-                                            value="Every day" />Every day</label>
-                                </li>
-                                <li>
-                                    <label>
-                                        <input type="radio" name="city" id="radio2" />Every week</label>
-                                </li>
-                                <li>
-                                    <label>
-                                        <input type="radio" name="city" id="radio3" />Every month</label>
-                                </li>
-                                <li>
-                                    <label>
-                                        <input type="radio" name="city" id="radio4" />Custom</label>
-                                </li>
-
-                            </ul>
-
-                        </div>
-
+                        <label for="frequency"  class="form-label">Frequency*</label>
+                            <select name="frequency" id="frequency" class="form-input">
+                                <option value="Every day">Every day</option>
+                                <option value="Every week">Every week</option>
+                                <option value="Every month">Every month</option>
+                                <option value="Custom">Custom</option>
+                            </select>
+                        <br>
                         <label for="reminder" class="form-label">Reminder</label>
                         <input type="text" class="form-input" id="reminder" name="reminder"><br>
-
                         <label for="note" class="form-label">Note</label>
                         <input type="text" class="form-input" id="note" name="note"><br>
-
-
-
-
-
                         <a href="newhabitadded.html">
                             <button type="button" id="end-button" class="button" onclick="end_timer()">Save</button>
                         </a>
