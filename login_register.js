@@ -82,16 +82,32 @@ function get_registration_form() {
 
     my_screen.innerHTML = "<h1>Registration Details</h1>" +
         "<form>" +
-        "<input type=\"text\" placeholder=\"First Name\">" +
-        "<input type=\"text\" placeholder=\"Last Name\">" +
-        "<input type=\"date\" name=\"Date of Birth\">" +
-        "<input type=\"email\" placeholder=\"Email Address\">" +
-        "<input type=\"text\" placeholder=\"Username\">" +
-        "<input type=\"password\" placeholder=\"Password\">" +
-        "<input type=\"password\" placeholder=\"Confirm Password\">" +
-        "<button id=\"confirm_reg\" onclick=\"get_pet_selector()\">Confirm Registration</button>" +
+        "<input class=\"reg_input\" type=\"text\" placeholder=\"First Name\" required>" +
+        "<input class=\"reg_input\" type=\"text\" placeholder=\"Last Name\" required>" +
+        "<input class=\"reg_input\" type=\"date\" name=\"Date of Birth\" required>" +
+        "<input class=\"reg_input\" type=\"email\" placeholder=\"Email Address\" required>" +
+        "<input class=\"reg_input\" type=\"text\" placeholder=\"Username\" required>" +
+        "<input class=\"reg_input\" type=\"password\" placeholder=\"Password\" required>" +
+        "<input class=\"reg_input\" type=\"password\" placeholder=\"Confirm Password\" required>" +
+        "<button id=\"confirm_reg\" onclick=\"regInputCheck(event)\">Confirm Registration</button>" +
         `<button class="alt_button" onclick="get_login_register_screen()">Back</button>`
     "</form>";
+}
+
+function regInputCheck(event) {
+    event.preventDefault();
+
+    var inputComplete = true;
+    var inputFields = document.getElementsByClassName("reg_input");
+    console.log(`InputFields: ${inputFields.length}`);
+
+    for (let index = 0; index < inputFields.length; index++) {
+        if (!inputFields[index].value) { inputComplete = false; }
+    }
+
+    if (inputComplete) {
+        get_pet_selector();
+    } else { alert("Input Incomplete;") }
 }
 
 
@@ -144,8 +160,8 @@ function get_pet_naming_screen(pet_number) {
                 Give your new friend a name and confirm your registration as last step:</p>
                 <form>
                 ${selected_pet}
-                <input type="text" placeholder="Pet Name">
-                <button id="done_button" onclick="end_timer()">Confirm</button>
+                <input id="naming_field" type="text" placeholder="Pet Name" required>
+                <button id="done_button" onclick="namingInputCheck(event)">Confirm</button>
                 <button class="alt_button" onclick="get_pet_selector()">Back</button>
                 </form>"`;
 }
@@ -165,8 +181,8 @@ function get_pet_selector1(petNum) {
     <button id="next_button" onclick="nextPet(${petNum})">Next -></button>
     </div>
     <form>
-    <input type="text" placeholder="Enter Pet Name" required>
-    <button onclick="end_timer()">Confirm Registration</button>
+    <input id="naming_field" type="text" placeholder="Enter Pet Name" required>
+    <button onclick="namingInputCheck(event)">Confirm Registration</button>
     <button class="alt_button" onclick="get_registration_form()">Back</button>
     </form>`
 }
@@ -178,4 +194,13 @@ function nextPet(currPetNum) {
 
 function prevPet(currPetNum) {
     currPetNum <= 1 ? get_pet_selector1(8) : get_pet_selector1(currPetNum - 1);
+}
+
+function namingInputCheck(event) {
+    event.preventDefault()
+
+    var namingComplete = true;
+    var inputField = document.getElementById("naming_field").value
+
+    inputField ? end_timer() : alert("Please Name Your Pet!");
 }
