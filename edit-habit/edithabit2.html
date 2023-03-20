@@ -157,9 +157,18 @@
                         <input type="text" class="form-input" id="frequency" name="frequency" required
                             value="current frequency"><br>
 
+                        <label for="frequency" class="form-label">Frequency*</label>
+                        <select name="frequency" id="frequency" class="form-input">
+                            <option value="Every day">Every day</option>
+                            <option value="Every week">Every week</option>
+                            <option value="Every month">Every month</option>
+                            <option value="Custom">Custom</option>
+                        </select>
+                        <br>
                         <label for="reminder" class="form-label">Reminder</label>
                         <input type="text" class="form-input" id="reminder" name="reminder"
                             value="current reminder"><br>
+                        <input type="time" class="form-input" id="reminder" name="reminder" value="20:00"><br>
 
                         <label for="note" class="form-label">Note</label>
                         <input type="text" class="form-input" id="note" name="note" value="current note"><br>

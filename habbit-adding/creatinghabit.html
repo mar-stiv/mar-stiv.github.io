@@ -171,14 +171,20 @@
                             </ul>
                         </div>
 
+                        <input type="text" class="form-input" id="name" name="name" required
+                            placeholder="e.g. Exercise"><br>
+                        <label for="frequency" class="form-label">Frequency*</label>
+                        <select name="frequency" id="frequency" class="form-input">
+                            <option value="Every day">Every day</option>
+                            <option value="Every week">Every week</option>
+                            <option value="Every month">Every month</option>
+                            <option value="Custom">Custom</option>
+                        </select>
+                        <br>
                         <label for="reminder" class="form-label">Reminder</label>
-                        <input type="text" class="form-input" id="reminder" name="reminder"><br>
-
+                        <input type="time" class="form-input" id="reminder" name="reminder" value="20:00"><br>
                         <label for="note" class="form-label">Notes</label>
                         <input type="text" class="form-input" id="note" name="note"><br>
-
-
-
                         <a href="newhabitadded.html">
                             <button type="button" id="end-button" class="button" onclick="end_timer()">Save</button>
                         </a>
